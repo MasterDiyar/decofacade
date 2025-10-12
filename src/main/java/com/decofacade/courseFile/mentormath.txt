@@ -1,0 +1,76 @@
+Greatest Math course ever been.
+
+Made by:
+Sekezhanov D. Kim Jong U.
+[1];
+
+Do you know that math is so easy and difficult at the same time? Like, a bunch of animals can count till 4 — for them, that’s already advanced calculus.
+Flowers grow petals in Fibonacci sequences, planets move in ellipses described by Kepler’s equations, and even memes obey the laws of exponential decay.
+In ZA WARUDO, everything that seems chaotic is actually ruled by numbers — you just have to look close enough.
+
+[MENTOR NOTE]:
+
+Remember, young mathematician — mathematics is not about memorizing formulas. It’s about seeing patterns in chaos and chaos in patterns.
+
+[2];
+
+In this course you will learn to understand math, not just to “do” it.
+Let’s start simple.
+
++ means concatenation — it’s how small things grow into something bigger.
+For example:
+
+a is one
+
+aa is two
+So, a + a = aa, just as 1 + 1 = 2.
+
+And * means multiplication — a form of repeated addition.
+If you have 3 boxes, each containing 4 apples, you can express this as:
+3 * 4 = 4 + 4 + 4 = 12.
+
+[MENTOR NOTE]:
+
+The real secret of multiplication is that it’s just addition... done lazily by people who don’t like counting too much. Efficiency is intelligence.
+
+[3];
+
+TEST a
+
+Solve: 192 + 8 = ?
+
+a) 201
+b) 199
+c) 200
+d) 202
+
+[MENTOR NOTE]:
+
+Don’t rush. It’s not about the answer, it’s about understanding why.
+192 is near 200 — adding 8 brings it exactly to that round, beautiful number.
+Think of numbers as distances on a line — sometimes it’s easier to “see” than to calculate.
+
+[4];
+
+Bla bla bla — ya ne pridumal.
+Let’s imagine this section is about creativity in mathematics.
+Even if you can’t think of an equation right now, the act of thinking mathematically is already valuable.
+Because math is not about perfection — it’s about persistence.
+
+[MENTOR NOTE]:
+
+Every great mathematician once said: “I don’t know yet.”
+And that “yet” is what makes progress happen.
+
+[5];
+
+END
+
+[MENTOR FINAL NOTE]:
+
+You have reached the end — but in mathematics, endings are illusions.
+Every equation solved opens two more questions.
+Keep asking. Keep solving. And remember:
+“1 + 1 = 2” is simple… until you start asking why.
+
+[6];

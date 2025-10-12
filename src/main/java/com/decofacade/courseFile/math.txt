@@ -1,0 +1,22 @@
+Greatest Math course ever been.
+
+Made by:
+Sekezhanov D. Kim Jong U.
+[1];
+Do you know that math is so easy and difficult at the same time, like a bunch of animals can count till 4,
+flower petals work in Fibonacci sequences and other things in ZA WARUDO can be explained by math.
+[2];
+In this course you could know about math. + <- is concatenation. like a is one aa is two so a + a = aa or 1+1=2
+* <- is multiplication. like you had 3 boxes where every box has 4 apples. So all apple count will be 3 * 4 = 4 +4 + 4=12
+[3];
+TEST a
+solve 192+8=?
+a) 201
+b) 199
+c) 200
+d) 202
+[4];
+Bla bla bla ya ne pridumal
+[5];
+END
+[6];

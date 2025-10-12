@@ -1,0 +1,103 @@
+**Greatest Java Course Ever Been**
+
+**Made by:**
+Sekezhanov D. & Kim Jong U.
+[1];
+**Introduction**
+Do you know that Java is one of the most popular and powerful programming languages in *ZA WARUDO*?
+It powers billions of devices — from banking servers and Android phones to satellites and smart toasters.
+
+Java follows the rule:
+> “Write Once, Run Anywhere.”
+> That means your code can run on any system that has the Java Virtual Machine (JVM).
+**Mentor Note:**
+
+> Welcome, young padawan of code.
+> In the world of Java, every bracket has purpose, and every error is a lesson.
+> Don’t fear the word *Virtual Machine* — it’s just magic that makes your code immortal.
+[2];
+**Classes and Objects**
+Everything in Java starts with **classes** and **objects**.
+Think of a *class* as a **blueprint**, and an *object* as the **thing you build from it**.
+Example:
+```
+class Dog {
+    void bark() {
+        System.out.println("Woof!");
+    }
+}
+```
+
+And in your `main` method:
+
+```
+Dog rex = new Dog();
+rex.bark();
+```
+
+**Mentor Note:**
+
+> A class is the design; an object is the creation.
+> If you hear “Woof!” in the console — congratulations, you brought code to life.
+> If not — check your braces. Java respects order more than chaos.
+[3];
+**Primitive Data Types**
+Java has eight primitive types:
+`int`, `double`, `boolean`, `char`, `byte`, `short`, `long`, `float`.
+Example:
+```
+int apples = 5;
+int boxes = 3;
+System.out.println(apples * boxes); // 15
+```
+**Mentor Note:**
+> Numbers never lie, but programmers sometimes do.
+> Remember: `=` means assignment, `==` means comparison.
+> Confuse them, and your logic may explode faster than a NullPointerException.
+[4];
+TEST b
+What will this code print?
+```
+int x = 10;
+int y = 3;
+System.out.println(x % y);
+```
+a) 3
+b) 1
+c) 0
+d) 10
+**Mentor Note:**
+
+> The `%` operator gives you the remainder of division.
+> In Java, even math is philosophical:
+> “Not everything divides evenly, but everything has a remainder.”
+[5];
+**Methods and Logic**
+Methods are how you organize your code into logical, reusable pieces.
+They take input (arguments), do something, and return an output.
+Example:
+```
+int sum(int a, int b) {
+    return a + b;
+}
+```
+Then you can call:
+```
+System.out.println(sum(5, 10)); // 15
+```
+
+**Mentor Note:**
+
+> A method is like a vending machine:
+> You insert arguments → get a result.
+> But forget the `return`, and you’ll get an empty can instead of coffee.
+[6];
+END
+**The End (for now)**
+Now you know: Java isn’t just a language — it’s a philosophy of order, structure, and verbose clarity.
+Ahead lies inheritance, interfaces, collections, and the dark art known as **multithreading**.
+
+**Mentor Note:**
+
+> Remember: a true programmer doesn’t seek easy paths.
+> He seeks **Stack Overflow**.
