@@ -1,5 +1,8 @@
 package com.decofacade.course;
 
+import com.decofacade.cli.CleanCode;
+
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Dictionary;
 import java.util.Hashtable;
@@ -12,8 +15,7 @@ public class User {
     public Dictionary<String, Integer> grades = new Hashtable<String, Integer>(){};
 
     public User(){
-        grades.put("Math", 0);
-        grades.put("Programming", 0);
+        CleanCode.LoadCourses(grades);
 
     }
 

@@ -1,9 +1,6 @@
 package com.decofacade.cli;
 
-import com.decofacade.course.Course;
-import com.decofacade.course.MathCourse;
-import com.decofacade.course.ProgrammingCourse;
-import com.decofacade.course.User;
+import com.decofacade.course.*;
 import com.decofacade.decorator.CertificateDecorator;
 import com.decofacade.decorator.GamificationDecorator;
 import com.decofacade.decorator.MentorSupportDecorator;
@@ -12,68 +9,74 @@ import java.util.Scanner;
 
 public class StudentPortalFacade {
 
-    Course currentCourse, msd;
-    User currentUser;
+
+    public static final Scanner scanner = new Scanner(System.in);
+    private final User currentUser =  new User();
     String type;
+    Course currentCourse, msd;
+
+
 
     static void print(String thing){System.out.println(thing);}
 
-    public static Scanner scanner = new Scanner(System.in);
 
     public StudentPortalFacade() {
-        currentUser = new User();
+        initialize();
+    }
+
+    void initialize(){
+        var fPath = "src/main/java/com/decofacade/courseFile";
 
         print(CleanCode.textEN[0]);
+        print(CleanCode.listTxtFiles(fPath));
 
-        var onetime = scanner.nextLine();
-        if(onetime.equals("math")) {
-            EnrollInCourse(new MathCourse(), new MathCourse(), "math.txt");
+        while(true){
+            try{
+                var onetime = scanner.nextLine();
+
+                EnrollInCourse(CleanCode.CB(fPath, onetime), CleanCode.CB(fPath, onetime));
+                break;}
+            catch(Exception e){System.out.println("Enter number");}
         }
-        else if(onetime.equals("programing")) {
-            EnrollInCourse(new ProgrammingCourse(), new ProgrammingCourse(),"programming.txt");
-        }
 
-        while (true) {
-            print(CleanCode.textEN[1]);
-            var txt = scanner.nextLine();
 
-            if (txt.equals("start")) {
-                startLearning(); break;
-            }
+        boolean work = true;
+
+        while (work) {
+            startLearning();
         }
     }
 
-    public void EnrollInCourse(Course course, Course ment, String path){
-        currentCourse = course;
-        currentCourse.Load(path);
+    public void EnrollInCourse(Course course, Course ment){
 
-        msd = new MentorSupportDecorator(ment).Load(path);
+
+        currentCourse = course;
+
+        msd = new MentorSupportDecorator(ment);
+
     }
 
     public void startLearning(){
         GamificationDecorator gd = new GamificationDecorator(currentCourse, currentUser);
-        String txt;
 
-        if (currentCourse instanceof MathCourse) {type = "Math";}
-        else if (currentCourse instanceof ProgrammingCourse) {type = "Programming";}
-
+        boolean lastPage = true;
         currentCourse.TextFromPage(0);
 
-        while(currentUser.grades.get(type) < 30){
+        while(lastPage){
+
             print("");
             print(CleanCode.textEN[2]);
-            txt = scanner.nextLine();
+            String txt = scanner.nextLine();
 
             switch (txt) {
-                case "next":
-                    gd.NextPage();
-                    break;
-                case "back":
+                case "next" ->
+                    lastPage = !gd.NextPage();
+                case "back" ->
                     gd.PreviousPage();
-                    break;
-                case "help":
+                case "help" ->
                     msd.TextFromPage(gd.getCurrentPage());
-                    break;
+                case "exit" ->
+                    lastPage = false;
             }
         }
         completeCourse();
@@ -84,6 +87,9 @@ public class StudentPortalFacade {
 
         cd.TextFromPage(cd.getCurrentPage());
         cd.NextPage();
+
+        print(CleanCode.textEN[3]);
+        if (scanner.nextLine().equals("Y")) {};
 
     }
 

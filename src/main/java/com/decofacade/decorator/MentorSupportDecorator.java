@@ -1,6 +1,9 @@
 package com.decofacade.decorator;
 
 import com.decofacade.course.Course;
+import com.decofacade.course.CourseBuilder;
+
+import java.io.File;
 
 public class MentorSupportDecorator implements Course {
 
@@ -8,11 +11,22 @@ public class MentorSupportDecorator implements Course {
 
     public MentorSupportDecorator(Course course) {
         this.course = course;
+        if (course instanceof CourseBuilder builder) {
+            var type = builder.GetPath()+".txt";
+            Load(type);
+        }
     }
 
     @Override
     public Course Load(String path) {
-        course.Load("mentor"+path);
+        System.out.println("Loading " + path + "\n*****\n*****\n*****\n*****\n*****");
+        File file = new File("src/main/java/com/decofacade/courseFile/mentor/"+path);
+        if (file.exists()) {
+            System.out.println("File " + path + " already exists");
+            course.Load("mentor/" + path);
+        }
+        else
+            course.Load(path);
         return this;
     }
 

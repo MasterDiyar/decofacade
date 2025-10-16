@@ -6,15 +6,20 @@ import java.util.Arrays;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class MathCourse implements Course{
+public class CourseBuilder implements Course {
     private String[] Pages;
     public int CurrentPage;
+    public String Path;
+
+    public String GetPath(){
+        return Path;
+    }
 
     @Override
     public Course Load(String path) {
         CurrentPage = 0;
         StringBuilder contentBuilder = new StringBuilder();
-
+        Path = path.split("\\.")[0];
 
         try (FileReader fr = new FileReader("src/main/java/com/decofacade/courseFile/"+path);
              Scanner scanner = new Scanner(fr)) {
