@@ -1,0 +1,4 @@
+diyar
+123
+math 10
+programming 0

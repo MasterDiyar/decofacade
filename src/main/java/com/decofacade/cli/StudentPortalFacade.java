@@ -9,24 +9,22 @@ import java.util.Scanner;
 
 public class StudentPortalFacade {
 
-
     public static final Scanner scanner = new Scanner(System.in);
-    private final User currentUser =  new User();
+    private User currentUser;
     String type;
     Course currentCourse, msd;
-
     boolean work = true;
-
 
     static void print(String thing){System.out.println(thing);}
 
-
-    public StudentPortalFacade() {
-        initialize();
-    }
+    public StudentPortalFacade() {initialize();}
 
     void initialize(){
         var fPath = "src/main/java/com/decofacade/courseFile";
+
+        UserAuth auth = new UserAuth();
+
+        currentUser = auth.thisUser;
 
         print(CleanCode.textEN[0]);
         print(CleanCode.listTxtFiles(fPath));
@@ -36,12 +34,8 @@ public class StudentPortalFacade {
                 var onetime = scanner.nextLine();
 
                 EnrollInCourse(CleanCode.CB(fPath, onetime), CleanCode.CB(fPath, onetime));
-                break;}
-            catch(Exception e){System.out.println("Enter number");}
+            break;} catch(Exception e){System.out.println("Enter number");}
         }
-
-
-
 
         while (work) {
             startLearning();
@@ -71,6 +65,7 @@ public class StudentPortalFacade {
                 case "back" -> gd.PreviousPage();
                 case "help" -> msd.TextFromPage(gd.getCurrentPage());
                 case "exit" -> lastPage = false;
+                case "save" -> currentUser.SaveUser();
             }
         }
         completeCourse();
@@ -88,16 +83,10 @@ public class StudentPortalFacade {
 
         print(CleanCode.textEN[3]);
 
-
-
-
         work = false;
         if (scanner.nextLine().equals("Y")) {
 
             initialize();
         }
-
-
     }
-
 }
