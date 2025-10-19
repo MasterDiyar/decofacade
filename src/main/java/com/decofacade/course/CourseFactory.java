@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class CourseBuilder implements Course {
+public class CourseFactory implements Course {
     private String[] Pages;
     public int CurrentPage;
     public String Path;

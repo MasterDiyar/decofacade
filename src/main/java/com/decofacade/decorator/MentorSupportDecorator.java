@@ -1,7 +1,7 @@
 package com.decofacade.decorator;
 
 import com.decofacade.course.Course;
-import com.decofacade.course.CourseBuilder;
+import com.decofacade.course.CourseFactory;
 
 import java.io.File;
 
@@ -11,7 +11,7 @@ public class MentorSupportDecorator implements Course {
 
     public MentorSupportDecorator(Course course) {
         this.course = course;
-        if (course instanceof CourseBuilder builder) {
+        if (course instanceof CourseFactory builder) {
             var type = builder.GetPath()+".txt";
             Load(type);
         }

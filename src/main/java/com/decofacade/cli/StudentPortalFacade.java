@@ -15,6 +15,7 @@ public class StudentPortalFacade {
     String type;
     Course currentCourse, msd;
 
+    boolean work = true;
 
 
     static void print(String thing){System.out.println(thing);}
@@ -40,7 +41,7 @@ public class StudentPortalFacade {
         }
 
 
-        boolean work = true;
+
 
         while (work) {
             startLearning();
@@ -48,8 +49,6 @@ public class StudentPortalFacade {
     }
 
     public void EnrollInCourse(Course course, Course ment){
-
-
         currentCourse = course;
 
         msd = new MentorSupportDecorator(ment);
@@ -63,20 +62,15 @@ public class StudentPortalFacade {
         currentCourse.TextFromPage(0);
 
         while(lastPage){
-
             print("");
             print(CleanCode.textEN[2]);
             String txt = scanner.nextLine();
 
             switch (txt) {
-                case "next" ->
-                    lastPage = !gd.NextPage();
-                case "back" ->
-                    gd.PreviousPage();
-                case "help" ->
-                    msd.TextFromPage(gd.getCurrentPage());
-                case "exit" ->
-                    lastPage = false;
+                case "next" -> lastPage = !gd.NextPage();
+                case "back" -> gd.PreviousPage();
+                case "help" -> msd.TextFromPage(gd.getCurrentPage());
+                case "exit" -> lastPage = false;
             }
         }
         completeCourse();
@@ -88,8 +82,21 @@ public class StudentPortalFacade {
         cd.TextFromPage(cd.getCurrentPage());
         cd.NextPage();
 
+        print("");
+        currentUser.ShowScore();
+        print("");
+
         print(CleanCode.textEN[3]);
-        if (scanner.nextLine().equals("Y")) {};
+
+
+
+
+        work = false;
+        if (scanner.nextLine().equals("Y")) {
+
+            initialize();
+        }
+
 
     }
 

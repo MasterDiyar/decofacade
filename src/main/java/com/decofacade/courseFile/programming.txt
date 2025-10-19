@@ -15,14 +15,14 @@ For example:
 ```
 class Dog {
     void bark() {
-        System.out.println("Woof!");
+        System.out.println("Woof!"):
     }
 }
 ```
 Then in your main method:
 ```
-Dog rex = new Dog();
-rex.bark();
+Dog rex = new Dog():
+rex.bark():
 ```
 And Rex will bark in the console like a true OOP creature.
 
@@ -32,8 +32,8 @@ int, double, boolean, char, byte, and others.
 They are the building blocks of all logic in your program.
 Example:
 ```
-int apples = 5;
-int boxes = 3;
+int apples = 5:
+int boxes = 3:
 System.out.println(apples * boxes); // 15
 ```
 This means you have 15 apples in total — same as in math, just with syntax.
@@ -42,9 +42,9 @@ This means you have 15 apples in total — same as in math, just with syntax.
 TEST b
 What will this code print?
 ```
-int x = 10;
-int y = 3;
-System.out.println(x % y);
+int x = 10:
+int y = 3:
+System.out.println(x % y):
 ```
 a) 3
 b) 1
@@ -58,7 +58,7 @@ You give it input (arguments), it processes them, and returns output (result).
 Example:
 ```
 int sum(int a, int b) {
-    return a + b;
+    return a + b:
 }
 ```
 Now you can call sum(5, 10) and get 15.

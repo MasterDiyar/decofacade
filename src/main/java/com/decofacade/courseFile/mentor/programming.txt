@@ -4,7 +4,7 @@
 Sekezhanov D. & Kim Jong U.
 [1];
 **Introduction**
-Do you know that Java is one of the most popular and powerful programming languages in *ZA WARUDO*?
+Do you know that Java is one of the most popular and powerful programming languages in ZA WARUDO?
 It powers billions of devices — from banking servers and Android phones to satellites and smart toasters.
 
 Java follows the rule:
@@ -23,7 +23,7 @@ Example:
 ```
 class Dog {
     void bark() {
-        System.out.println("Woof!");
+        System.out.println("Woof!"):
     }
 }
 ```
@@ -31,8 +31,8 @@ class Dog {
 And in your `main` method:
 
 ```
-Dog rex = new Dog();
-rex.bark();
+Dog rex = new Dog():
+rex.bark():
 ```
 
 **Mentor Note:**

@@ -1,9 +1,7 @@
 package com.decofacade.cli;
 
 import com.decofacade.course.Course;
-import com.decofacade.course.CourseBuilder;
-import com.decofacade.course.MathCourse;
-import com.decofacade.course.ProgrammingCourse;
+import com.decofacade.course.CourseFactory;
 
 import java.io.File;
 import java.util.Dictionary;
@@ -53,7 +51,7 @@ public class CleanCode {
     }
 
     public static Course CB(String folderPath, String onetime) {
-        return new CourseBuilder()
+        return new CourseFactory()
                 .Load(CleanCode
                         .getFileNameByIndex(folderPath, Integer.parseInt(onetime)));
     }

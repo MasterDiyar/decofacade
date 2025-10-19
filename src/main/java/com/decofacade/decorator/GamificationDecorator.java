@@ -11,7 +11,7 @@ public class GamificationDecorator implements Course {
         this.course = course;
         this.user = user;
 
-        if (course instanceof CourseBuilder builder) {
+        if (course instanceof CourseFactory builder) {
             type = builder.GetPath();
         }
     }
